@@ -19,41 +19,50 @@
         }
         .hero {
             background: #888;
-            height: 50vh;
+            height: 40vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         .hero h1 {
             font-size: 3rem;
         }
         .container {
             padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 2.5rem;
         }
         .product {
             background: #fff;
             margin: 1rem 0;
             padding: 1rem;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
         }
-        .product img {
-            max-width: 100%;
-            border-radius: 8px;
+        .values-list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 1rem 0 0 0;
+            list-style: none;
         }
-        .product h2 {
-            margin-top: 0;
-        }
-        .product p {
-            margin: 0.5rem 0;
+        .values-list li {
+            background: #ececec;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            font-size: 1em;
         }
         .contact-form {
             background: #fff;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .contact-form input,
         .contact-form textarea {
@@ -74,39 +83,106 @@
         .contact-form button:hover {
             background: #555;
         }
+        blockquote {
+            border-left: 4px solid #1976d2;
+            background: #f2f6f8;
+            margin: 1em 0;
+            padding: 1em 1.5em;
+            font-style: italic;
+            color: #1976d2;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0 1rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Altida – Utekök</h1>
+        <p><em>Altida = Alltid Altan-tid</em></p>
     </header>
     <section class="hero">
-        <h1>Välkommen till Altida – Utekök</h1>
+        <h1>Utekök som håller</h1>
     </section>
     <div class="container">
-        <section class="products">
-            <h2>Våra Produkter</h2>
-            <div class="product">
-                <h2>Kompakt</h2>
-                <p>Ett kompakt utekök som passar mindre ytor.</p>
-                <p>Pris: 50,000 SEK</p>
-            </div>
-            <div class="product">
-                <h2>Standard</h2>
-                <p>Vårt standardutbud med alla nödvändiga funktioner.</p>
-                <p>Pris: 75,000 SEK</p>
-            </div>
-            <div class="product">
-                <h2>L-formad</h2>
-                <p>Ett L-format utekök för större ytor och mer arbetsyta.</p>
-                <p>Pris: 100,000 SEK</p>
-            </div>
-            <div class="product">
-                <h2>Köksö med Barbord</h2>
-                <p>En köksö med barbord för social matlagning.</p>
-                <p>Pris: 125,000 SEK</p>
-            </div>
+
+        <section>
+            <h2>Berättelsen om Altida</h2>
+            <p>
+                Det var en sån där första riktiga vårdag i Värmland. Solen började värma på riktigt, kaffekoppen ångade i handen, fåglarna sjöng, och världen kändes plötsligt lite lättare.<br>
+                "Nu är det verkligen altan-tid," sa Erik. Lina, hans syster, höjde på huvudet och log. "Altan-tid, alltid. Altida."<br>
+                Ett nytt ord, fött ur en solig stund på altanen – en känsla av att livet får andas. Altida är doften av grill, ljudet av skratt, smaken av något kallt i glaset. Det är när kroppen slappnar av och själen hinner ikapp.<br>
+                När det var dags att skapa ett varumärke för exklusiva utekök, var det självklart. Vad passar bättre än Altida – där tiden stannar och livet får njutas?
+            </p>
         </section>
+
+        <section>
+            <h2>Affärsidé</h2>
+            <p>
+                Att designa och tillverka exklusiva utekök i massiva naturmaterial som betong och ädelträ, för kunder som värdesätter kvalitet, hållbarhet och tidlös design. Produkterna är skräddarsydda, robusta och estetiskt tilltalande – skapade för att stå emot både väder och trender.
+            </p>
+        </section>
+
+        <section>
+            <h2>Vision & Mission</h2>
+            <p><strong>Vision:</strong> Att bli Nordens mest eftertraktade varumärke för exklusiva utekök i naturmaterial – där varje produkt är ett konstverk i funktionell form.</p>
+            <p><strong>Mission:</strong> Vi skapar utekök som förenar form, funktion och hållbarhet. Genom genuint hantverk, förstklassiga material och personlig service levererar vi en upplevelse som förhöjer varje utomhusmiljö.</p>
+        </section>
+
+        <section>
+            <h2>Våra värdeord</h2>
+            <ul class="values-list">
+                <li>Hållbarhet</li>
+                <li>Äkthet</li>
+                <li>Funktionell estetik</li>
+                <li>Personlig service</li>
+                <li>Skandinavisk enkelhet</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Standardprodukter – Betongskiva <span style="color:#1976d2;">Just nu gratis leverans</span></h2>
+            <div class="product">
+                <h3>Kompakt (B: 1,8 m)</h3>
+                <p>Grillmodul (90mm) + Arbetsyta (90mm)</p>
+                <p><strong>Listpris:</strong> 6 968:-</p>
+            </div>
+            <div class="product">
+                <h3>Standard (B: 2,4 m)</h3>
+                <p>Arbetsyta (60mm) + Grill (90mm) + Disk (90mm)</p>
+                <p><strong>Listpris:</strong> 9 568:-</p>
+            </div>
+            <div class="product">
+                <h3>L-formad (B: 3,6 m)</h3>
+                <p>Grill + Disk + Hörn + Arbetsyta + Förvaring</p>
+                <p><strong>Listpris:</strong> 14 436:-</p>
+            </div>
+            <div class="product">
+                <h3>Köksö med barbord (B: 2,3 m)</h3>
+                <p><strong>Listpris:</strong> 12 436:-</p>
+            </div>
+            <p>
+                <strong>Mått:</strong><br>
+                Stomme + bänkskiva<br>
+                H: 93 cm (+12 cm barbord)<br>
+                D: 60 cm + bänkskiva 3 cm (+40 cm barbord)<br>
+                B: [Standard] + 6 cm
+            </p>
+        </section>
+
+        <section>
+            <h2>Pitch</h2>
+            <blockquote>
+                Vi bygger utekök som håller – på riktigt.<br>
+                På Altida skapar vi exklusiva utekök i massiva naturmaterial som betong och ädelträ. Inga fanér, inga kompromisser – bara äkta hantverk, designad för att tåla både väder och tid.
+            </blockquote>
+            <p>
+                Vår målgrupp är designmedvetna villaägare, arkitekter och fastighetsutvecklare. Vi levererar inte bara ett kök – vi levererar en upplevelse.
+            </p>
+        </section>
+
         <section class="contact">
             <h2>Kontakta Oss</h2>
             <form class="contact-form">
@@ -117,5 +193,8 @@
             </form>
         </section>
     </div>
+    <footer>
+        &copy; 2025 Altida Kök & Design | <a href="mailto:info@altida.se">info@altida.se</a>
+    </footer>
 </body>
 </html>
