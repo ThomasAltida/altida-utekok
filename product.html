@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Produkt</title>
+</head>
+<body>
+  <div id="product-details"></div>
+  <label for="color">Välj färg:</label>
+  <select id="color">
+    <option>Grå</option>
+    <option>Vit</option>
+    <option>Svart</option>
+  </select>
+  <label for="size">Välj storlek:</label>
+  <select id="size">
+    <option>Liten</option>
+    <option>Medium</option>
+    <option>Stor</option>
+  </select>
+  <button onclick="addToCart()">Lägg i varukorg</button>
+
+  <script src="cart.js"></script>
+  <script>
+    // Simpler produktdata, kan ersättas med JSON om du vill
+    const products = [
+      {id: "1", name: "Kompakt", price: 50000, desc: "Ett kompakt utekök som passar mindre ytor.", img: "image_1.jpg"},
+      {id: "2", name: "Standard", price: 75000, desc: "Vårt standardutbud med alla nödvändiga funktioner.", img: "image_2.jpg"},
+      {id: "3", name: "L-formad", price: 100000, desc: "Ett L-format utekök för större ytor och mer arbetsyta.", img: "image_3.jpg"},
+      {id: "4", name: "Köksö med Barbord", price: 125000, desc: "En köksö med barbord för social matlagning.", img: "image_4.jpg"}
+    ];
+    const urlParams = new URLSearchParams(window.location.search);
+    const prodId = urlParams.get('id');
+    const product = products.find(p => p.id === prodId);
+
+    if(product){
+      document.getElementById('product-details').innerHTML = `
+        <h1>${product.name}</h1>
+        <img src="${product.img}" alt="${product.name}" style="max-width:300px;">
+        <p>${product.desc}</p>
+        <p><b>Pris:</b> ${product.price} SEK</p>
+      `;
+    } else {
+      document.getElementById('product-details').innerHTML = 'Produkten hittades inte.';
+      document.querySelector('button').style.display = "none";
+    }
+
+    function addToCart() {
+      const color = document.getElementById('color').value;
+      const size = document.getElementById('size').value;
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ id: product.id, name: product.name, price: product.price, color, size });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert('Produkten är tillagd i varukorgen!');
+    }
+  </script>
+</body>
+</html>
