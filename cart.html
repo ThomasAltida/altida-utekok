@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Varukorg</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f7fa; color: #222; }
+    .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 4px 24px rgba(32,99,155,0.09); padding: 40px 24px; }
+    h1 { color: #173753; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+    th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
+    th { background: #f8fafc; }
+    .remove-btn { background: #d9534f; color: #fff; border: none; border-radius: 5px; padding: 5px 12px; cursor: pointer; }
+    .remove-btn:hover { background: #c9302c; }
+    .checkout-btn { background: #20639b; color: #fff; border: none; padding: 12px 28px; border-radius: 5px; font-size: 1em; cursor: pointer; }
+    .checkout-btn:hover { background: #3caea3; }
+    .empty { text-align: center; color: #888; margin: 32px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Din varukorg</h1>
+    <div id="cart-contents"></div>
+    <button class="checkout-btn" onclick="checkout()" id="checkout-btn" style="display:none;">Till kassan</button>
+  </div>
+  <script src="cart.js"></script>
+  <script>
+    function renderCart() {
+      const cart = getCart();
+      const container = document.getElementById('cart-contents');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      if (cart.length === 0) {
+        container.innerHTML = '<div class="empty">Din varukorg är tom.</div>';
+        checkoutBtn.style.display = "none";
+        return;
+      }
+      let html = '<table><tr><th>Produkt</th><th>Färg</th><th>Storlek</th><th>Pris</th><th></th></tr>';
+      let total = 0;
+      cart.forEach((item, i) => {
+        html += `<tr>
+          <td>${item.name}</td>
+          <td>${item.color}</td>
+          <td>${item.size}</td>
+          <td>${item.price} SEK</td>
+          <td><button class="remove-btn" onclick="removeFromCart(${i})">Ta bort</button></td>
+        </tr>`;
+        total += Number(item.price);
+      });
+      html += `<tr><td colspan="3" style="text-align:right"><b>Totalt:</b></td><td colspan="2"><b>${total} SEK</b></td></tr>`;
+      html += '</table>';
+      container.innerHTML = html;
+      checkoutBtn.style.display = "inline-block";
+    }
+    function removeFromCart(index) {
+      let cart = getCart();
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+    function checkout() {
+      alert('Tack för ditt köp! (Här kan du lägga in riktig betalningslogik)');
+      clearCart();
+      renderCart();
+    }
+    renderCart();
+  </script>
+</body>
+</html>
