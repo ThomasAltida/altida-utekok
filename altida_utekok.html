@@ -3,64 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altida – Utekök</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Altida - Utekök</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Altida – Utekök</h1>
+        <div class="hero">
+            <h1>Vi bygger utekök som håller – på riktigt.</h1>
+            <div class="cta-buttons">
+                <a href="#products" class="btn">Se våra produkter</a>
+                <a href="#contact" class="btn">Kontakta oss</a>
+            </div>
+        </div>
     </header>
-    <nav>
-        <a href="#hero">Hem</a>
-        <a href="#products">Produkter</a>
-        <a href="#about">Om Oss</a>
-        <a href="#contact">Kontakt</a>
-        <a href="#gallery">Galleri</a>
-    </nav>
-    <section id="hero" class="hero">
-        <h1>Välkommen till Altida – Utekök</h1>
-    </section>
-    <div class="container">
+    <main>
         <section id="products" class="products">
-            <h2>Våra Produkterrrrrr</h2>
-            <div class="product">
-                <h2>Kompakt</h2>
-                <p>Ett kompakt utekök som passar mindre ytor.</p>
-                <p>Pris: 50,000 SEK</p>
+            <h2>Våra Produkter</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="images/kompakt.jpg" alt="Kompakt">
+                    <h3>Kompakt</h3>
+                    <p>50 000 SEK</p>
+                </div>
+                <div class="product">
+                    <img src="images/standard.jpg" alt="Standard">
+                    <h3>Standard</h3>
+                    <p>75 000 SEK</p>
+                </div>
+                <div class="product">
+                    <img src="images/l-formad.jpg" alt="L-formad">
+                    <h3>L-formad</h3>
+                    <p>100 000 SEK</p>
+                </div>
+                <div class="product">
+                    <img src="images/kokso.jpg" alt="Köksö med barbord">
+                    <h3>Köksö med barbord</h3>
+                    <p>125 000 SEK</p>
+                </div>
             </div>
-            <div class="product">
-                <h2>Standard</h2>
-                <p>Vårt standardutbud med alla nödvändiga funktioner.</p>
-                <p>Pris: 75,000 SEK</p>
-            </div>
-            <div class="product">
-                <h2>L-formad</h2>
-                <p>Ett L-format utekök för större ytor och mer arbetsyta.</p>
-                <p>Pris: 100,000 SEK</p>
-            </div>
-            <div class="product">
-                <h2>Köksö med Barbord</h2>
-                <p>En köksö med barbord för social matlagning.</p>
-                <p>Pris: 125,000 SEK</p>
+            <p class="free-delivery">Gratis leverans just nu!</p>
+        </section>
+        <section id="materials" class="materials">
+            <h2>Material & Design</h2>
+            <div class="material-list">
+                <div class="material">
+                    <img src="images/betong.jpg" alt="Betong">
+                    <h3>Betong</h3>
+                    <p>Hållbarhet och struktur</p>
+                </div>
+                <div class="material">
+                    <img src="images/adeltra.jpg" alt="Ädelträ">
+                    <h3>Ädelträ</h3>
+                    <p>Naturlig värme och elegans</p>
+                </div>
+                <div class="material">
+                    <img src="images/rostfrittstal.jpg" alt="Rostfritt stål">
+                    <h3>Rostfritt stål</h3>
+                    <p>Funktion och finish</p>
+                </div>
             </div>
         </section>
         <section id="about" class="about">
             <h2>Om Altida</h2>
-            <p>Altida – Utekök är en innovativ lösning för utomhusmatlagning, designad med skandinavisk minimalism och högkvalitativa material som betong, ädelträ och rostfritt stål. Vår vision är att skapa en plats där människor kan samlas och njuta av matlagning utomhus.</p>
+            <p><strong>Vision:</strong> Funktionella och estetiskt tilltalande utekök</p>
+            <p><strong>Mission:</strong> Hållbarhet + design</p>
+            <p><strong>Affärsidé:</strong> Exklusiva utekök i betong och ädelträ</p>
+            <p><strong>Grundare:</strong> Thomas Hübinette</p>
+            <p><strong>Värdeord:</strong> Hållbarhet, Äkthet, Funktionell estetik, Personlig service</p>
         </section>
         <section id="contact" class="contact">
-            <h2>Kontakta Oss</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Ditt namn" required>
-                <input type="email" placeholder="Din e-post" required>
-                <textarea placeholder="Ditt meddelande" required></textarea>
+            <h2>Kontakt</h2>
+            <form>
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Meddelande:</label>
+                <textarea id="message" name="message" required></textarea>
                 <button type="submit">Skicka</button>
             </form>
+            <p>Telefonnummer: 070-123 45 67</p>
+            <p>E-post: info@altida.se</p>
+            <div id="map"></div>
         </section>
         <section id="gallery" class="gallery">
             <h2>Galleri</h2>
-            <p>Platshållarbilder kommer att läggas till här.</p>
+            <div class="gallery-images">
+                <img src="images/gallery1.jpg" alt="Gallery Image 1">
+                <img src="images/gallery2.jpg" alt="Gallery Image 2">
+                <img src="images/gallery3.jpg" alt="Gallery Image 3">
+            </div>
         </section>
-    </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Altida. Alla rättigheter förbehållna.</p>
+    </footer>
 </body>
 </html>
