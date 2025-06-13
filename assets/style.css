@@ -1,0 +1,88 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+h1, h2, h3 {
+    color: #333333;
+}
+
+.hero {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.hero-buttons .btn {
+    background-color: #D97B42;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.products, .materials, .about, .contact, .gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product-list, .material-list, .gallery-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product, .material, .gallery-item {
+    margin: 20px;
+    flex: 1 1 200px;
+}
+
+.product img, .material img, .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.price, .offer {
+    font-size: 1.2em;
+    color: #D97B42;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #B0B0B0;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background-color: #D97B42;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
