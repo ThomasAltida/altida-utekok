@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Altida – Utekök</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altida - Premium Utekök</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <img src="image_1.jpg" alt="Altida logotyp" />
-    <h1>Altida – Utekök</h1>
-  </header>
-  <nav>
-    <a href="#hero">Hem</a>
-    <a href="#products">Produkter</a>
-    <a href="#about">Om Oss</a>
-    <a href="#contact">Kontakt</a>
-    <a href="#gallery">Galleri</a>
-    <a href="cart.html">Varukorg</a>
-  </nav>
-  <section id="hero" class="hero">
-    <h1>Välkommen till Altida – Utekök</h1>
-  </section>
-  <div class="container">
-    <section id="products">
-      <h2>Våra Produkter</h2>
-      <div class="product-list">
-        <a class="product" href="product.html?id=1">
-          <img src="image_1.jpg" alt="Kompakt">
-          <h2>Kompakt</h2>
-          <p>Ett kompakt utekök som passar mindre ytor.</p>
-          <p><b>Pris:</b> 50,000 SEK</p>
-        </a>
-        <a class="product" href="product.html?id=2">
-          <img src="image_2.jpg" alt="Standard">
-          <h2>Standard</h2>
-          <p>Vårt standardutbud med alla nödvändiga funktioner.</p>
-          <p><b>Pris:</b> 75,000 SEK</p>
-        </a>
-        <a class="product" href="product.html?id=3">
-          <img src="image_3.jpg" alt="L-formad">
-          <h2>L-formad</h2>
-          <p>Ett L-format utekök för större ytor och mer arbetsyta.</p>
-          <p><b>Pris:</b> 100,000 SEK</p>
-        </a>
-        <a class="product" href="product.html?id=4">
-          <img src="image_4.jpg" alt="Köksö med barbord">
-          <h2>Köksö med Barbord</h2>
-          <p>En köksö med barbord för social matlagning.</p>
-          <p><b>Pris:</b> 125,000 SEK</p>
-        </a>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Vi bygger utekök som håller – på riktigt.</h1>
+            <p>Exklusiva utekök i betong och ädelträ – designade för att tåla både väder och tid.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn">Se våra produkter</a>
+                <a href="#contact" class="btn">Kontakta oss</a>
+            </div>
+        </div>
     </section>
-    <section id="about">
-      <h2>Om Altida</h2>
-      <p>Altida – Utekök är en innovativ lösning för utomhusmatlagning, designad med skandinavisk minimalism och högkvalitativa material som betong, ädelträ och rostfritt stål.</p>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Våra Utekök</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="images/kompakt.jpg" alt="Kompakt">
+                <h3>Kompakt</h3>
+                <p>Ett kompakt utekök som passar mindre ytor.</p>
+                <p class="price">50 000 SEK</p>
+            </div>
+            <div class="product">
+                <img src="images/standard.jpeg" alt="Standard">
+                <h3>Standard</h3>
+                <p>Vårt standardutbud med alla nödvändiga funktioner.</p>
+                <p class="price">75 000 SEK</p>
+            </div>
+            <div class="product">
+                <img src="images/l-formad.jpeg" alt="L-formad">
+                <h3>L-formad</h3>
+                <p>Ett L-format utekök för större ytor och mer arbetsyta.</p>
+                <p class="price">100 000 SEK</p>
+            </div>
+            <div class="product">
+                <img src="images/Exklusivt.jpeg" alt="Köksö med barbord">
+                <h3>Köksö med barbord</h3>
+                <p>En köksö med barbord för social matlagning.</p>
+                <p class="price">125 000 SEK</p>
+            </div>
+        </div>
+        <p class="offer">Just nu: Gratis leverans på alla modeller!</p>
     </section>
-    <section id="contact">
-      <h2>Kontakta Oss</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Ditt namn" required>
-        <input type="email" placeholder="Din e-post" required>
-        <textarea placeholder="Ditt meddelande" required></textarea>
-        <button type="submit">Skicka</button>
-      </form>
+
+    <!-- Materials & Design Section -->
+    <section id="materials" class="materials">
+        <h2>Material & Design</h2>
+        <div class="material-list">
+            <div class="material">
+                <img src="images/Varuprover1.jpeg" alt="Betong">
+                <h3>Betong</h3>
+                <p>Hållbarhet och struktur – varje skiva är unik.</p>
+            </div>
+            <div class="material">
+                <img src="images/Varuprover1.jpeg" alt="Ädelträ">
+                <h3>Ädelträ</h3>
+                <p>Naturlig värme och elegans – ek i vacker patina.</p>
+            </div>
+            <div class="material">
+                <img src="images/Varuprover3.jpeg" alt="Rostfritt stål">
+                <h3>Rostfritt stål</h3>
+                <p>Funktion och finish – för detaljer som håller.</p>
+            </div>
+        </div>
     </section>
-    <section id="gallery">
-      <h2>Galleri</h2>
-      <div class="gallery">
-        <img src="image_2.jpg" alt="Galleri 1">
-        <img src="image_3.jpg" alt="Galleri 2">
-        <img src="image_4.jpg" alt="Galleri 3">
-        <img src="image_5.jpg" alt="Galleri 4">
-      </div>
-    </section>
-  </div>
-  <footer>
-    &copy; 2025 Altida Utekök. Alla rättigheter förbehållna.
-  </footer>
-</body>
-</html>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Om Altida</
